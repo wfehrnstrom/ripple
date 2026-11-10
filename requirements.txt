@@ -1,0 +1,39 @@
+tqdm
+audioop-lts==0.2.2
+bidict==0.24.1
+cffi==2.1.1
+construct==2.10.70
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.67.0
+kiwisolver==1.5.1
+matplotlib==3.11.2
+mutagen==1.48.1
+mysql-connector-python==26.10.0
+numpy==2.5.4
+packaging==26.3
+pillow==13.0.0
+psutil==7.2.2
+psycopg2-binary==2.9.13
+PyAudio==0.2.14
+PyAudioWPatch==0.2.12.9
+pycparser==3.11
+pydub==0.25.1
+pyparsing==3.3.3
+pyrekordbox==0.5.0
+python-dateutil==2.9.0.post0
+scipy==1.18.1
+six==1.17.0
+sounddevice==0.5.6
+SQLAlchemy==2.1.4
+sqlcipher3-wheels==0.5.7
+tinytag==2.3.2
+typing_extensions==4.16.0
+ruff>=0.4.8
+pydub==0.25.1
+PyAudio==0.2.14
+numpy == 2.5.4
+scipy == 1.18.1
+matplotlib==3.11.2
+mysql-connector-python==26.10.0
+psycopg2-binary==2.9.13 --only-binary :all:

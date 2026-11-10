@@ -1,0 +1,198 @@
+{
+  "data": [
+    {
+      "id": "15937557",
+      "type": "tracks",
+      "attributes": {
+        "title": "Rà-Àkõ-St",
+        "version": "Todd Terje Extended Edit",
+        "isrc": "NOFEE2101011",
+        "duration": "PT8M39S",
+        "copyright": {
+          "text": "(P) 2012 Feedelity Music AS"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "D",
+        "keyScale": "MINOR",
+        "bpm": 118,
+        "popularity": 0.33533316936466534,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/15937557",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2012-06-12T22:05:45Z"
+      },
+      "relationships": {
+        "albums": {
+          "data": [
+            {
+              "id": "15937556",
+              "type": "albums",
+              "meta": {
+                "replacement": {
+                  "status": "ORIGINAL"
+                }
+              }
+            }
+          ],
+          "links": {
+            "self": "/tracks/15937557/relationships/albums?shareCode=xyz&countryCode=US&replaceMedia=albums"
+          }
+        }
+      }
+    },
+    {
+      "id": "353400028",
+      "type": "tracks",
+      "attributes": {
+        "title": "Oral (Olof Dreijer Remix)",
+        "version": null,
+        "isrc": "GBBTF2400053",
+        "duration": "PT5M22S",
+        "copyright": {
+          "text": "One Little Independent Records"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "D",
+        "keyScale": "MAJOR",
+        "bpm": 129,
+        "popularity": 0.34629360938277826,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/353400028",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2024-03-25T11:07:48Z"
+      },
+      "relationships": {
+        "albums": {
+          "data": [
+            {
+              "id": "353400027",
+              "type": "albums",
+              "meta": {
+                "replacement": {
+                  "status": "ORIGINAL"
+                }
+              }
+            }
+          ],
+          "links": {
+            "self": "/tracks/353400028/relationships/albums?shareCode=xyz&countryCode=US&replaceMedia=albums"
+          }
+        }
+      }
+    }
+  ],
+  "links": {
+    "self": "/tracks?filter%5Bid%5D=15937557%2C353400028%2C99748180&include=albums&shareCode=xyz&countryCode=US&replaceMedia=albums"
+  },
+  "included": [
+    {
+      "id": "15937556",
+      "type": "albums",
+      "attributes": {
+        "title": "Rà-Àkõ-St / Ęg-Gęd-Ōsis (Extended Edits)",
+        "barcodeId": "7090014300480",
+        "numberOfVolumes": 1,
+        "numberOfItems": 2,
+        "duration": "PT16M6S",
+        "explicit": false,
+        "ai": false,
+        "releaseDate": "2012-07-27",
+        "copyright": {
+          "text": "(C) 2012 Feedelity Music AS"
+        },
+        "popularity": 0.25895939054773864,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/album/15937556",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "type": "SINGLE",
+        "albumType": "SINGLE"
+      }
+    },
+    {
+      "id": "353400027",
+      "type": "albums",
+      "attributes": {
+        "title": "Oral (Olof Dreijer Remix)",
+        "barcodeId": "5016958105853",
+        "numberOfVolumes": 1,
+        "numberOfItems": 1,
+        "duration": "PT5M22S",
+        "explicit": false,
+        "ai": false,
+        "releaseDate": "2024-04-10",
+        "copyright": {
+          "text": "One Little Independent Records"
+        },
+        "popularity": 0.2542637230556768,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/album/353400027",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "type": "SINGLE",
+        "albumType": "SINGLE",
+        "createdAt": "2024-03-25T11:07:48Z"
+      }
+    }
+  ]
+}
