@@ -1,0 +1,862 @@
+{
+  "data": [
+    {
+      "id": "ZH8jTNerzrtlYZ9RKz2ZmrNVe2hxqzNYKVqCnfAonvrwSMXIlGD",
+      "type": "searchResults",
+      "attributes": {
+        "query": "Buy a Dream Chavinski",
+        "trackingId": "a6385ec1-17ac-4a70-ac24-71d8d26ea7e6"
+      },
+      "relationships": {
+        "tracks": {
+          "data": [
+            {
+              "id": "150972124",
+              "type": "tracks"
+            },
+            {
+              "id": "153606725",
+              "type": "tracks"
+            },
+            {
+              "id": "261284472",
+              "type": "tracks"
+            },
+            {
+              "id": "451809538",
+              "type": "tracks"
+            },
+            {
+              "id": "296916347",
+              "type": "tracks"
+            },
+            {
+              "id": "115946190",
+              "type": "tracks"
+            },
+            {
+              "id": "481450520",
+              "type": "tracks"
+            },
+            {
+              "id": "301115150",
+              "type": "tracks"
+            },
+            {
+              "id": "217026267",
+              "type": "tracks"
+            },
+            {
+              "id": "80016415",
+              "type": "tracks"
+            },
+            {
+              "id": "378314023",
+              "type": "tracks"
+            },
+            {
+              "id": "357249780",
+              "type": "tracks"
+            },
+            {
+              "id": "23758143",
+              "type": "tracks"
+            },
+            {
+              "id": "439255622",
+              "type": "tracks"
+            },
+            {
+              "id": "526686831",
+              "type": "tracks"
+            },
+            {
+              "id": "526569500",
+              "type": "tracks"
+            },
+            {
+              "id": "276475758",
+              "type": "tracks"
+            },
+            {
+              "id": "292898109",
+              "type": "tracks"
+            },
+            {
+              "id": "499373478",
+              "type": "tracks"
+            },
+            {
+              "id": "292553769",
+              "type": "tracks"
+            }
+          ],
+          "links": {
+            "self": "/searchResults/ZH8jTNerzrtlYZ9RKz2ZmrNVe2hxqzNYKVqCnfAonvrwSMXIlGD/relationships/tracks?deviceType=DESKTOP&countryCode=US&systemType=IOS&clientVersion=2026.0.1&explicitFilter=INCLUDE",
+            "next": "/searchResults/ZH8jTNerzrtlYZ9RKz2ZmrNVe2hxqzNYKVqCnfAonvrwSMXIlGD/relationships/tracks?deviceType=DESKTOP&countryCode=US&systemType=IOS&clientVersion=2026.0.1&explicitFilter=INCLUDE&page%5Bcursor%5D=3nI1Esi",
+            "meta": {
+              "nextCursor": "3nI1Esi"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "links": {
+    "self": "/searchResults?filter%5Bquery%5D=Buy+a+Dream+Chavinski&include=tracks&deviceType=DESKTOP&countryCode=US&systemType=IOS&clientVersion=2026.0.1&explicitFilter=INCLUDE"
+  },
+  "included": [
+    {
+      "id": "115946190",
+      "type": "tracks",
+      "attributes": {
+        "title": "Can You Buy Me a Dream?",
+        "version": null,
+        "isrc": "NLM791900116",
+        "duration": "PT1M24S",
+        "copyright": {
+          "text": "Delsin Records"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.11383344079418924,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/115946190",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2019-08-21T04:15:08Z"
+      }
+    },
+    {
+      "id": "150972124",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy a Dream",
+        "version": null,
+        "isrc": "UKN6K2000591",
+        "duration": "PT3M6S",
+        "copyright": {
+          "text": "2020 Lobster Theremin"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.2599960026472117,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/150972124",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2020-08-05T01:34:28Z"
+      }
+    },
+    {
+      "id": "153606725",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy Yourself a Dream",
+        "version": "",
+        "isrc": "QMG552000060",
+        "duration": "PT4M9S",
+        "copyright": {
+          "text": "(P) 2020 Monotronic"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.27074816781969885,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/153606725",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2020-08-29T15:09:42Z"
+      }
+    },
+    {
+      "id": "217026267",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy Me a Dream",
+        "version": null,
+        "isrc": "USCGJ1628018",
+        "duration": "PT2M4S",
+        "copyright": {
+          "text": "2016 Seagreen Records"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.06699078670062644,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/217026267",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2022-02-16T21:35:16Z"
+      }
+    },
+    {
+      "id": "23758143",
+      "type": "tracks",
+      "attributes": {
+        "title": "Would You Like To Buy A Dream'",
+        "version": null,
+        "isrc": "DEKB71381754",
+        "duration": "PT3M32S",
+        "copyright": {
+          "text": "3 Soubor Muzika Ltd"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.050306500943257004,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/23758143",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2013-11-18T16:19:42Z"
+      }
+    },
+    {
+      "id": "261284472",
+      "type": "tracks",
+      "attributes": {
+        "title": "Mama Won't You Buy Me a Dream",
+        "version": null,
+        "isrc": "NLN380900029",
+        "duration": "PT3M28S",
+        "copyright": {
+          "text": "(P) 2009 Greytown Recordings"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.19334130431967622,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/261284472",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2022-11-17T21:06:04Z"
+      }
+    },
+    {
+      "id": "276475758",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy A Dream",
+        "version": null,
+        "isrc": "QZTLA2361094",
+        "duration": "PT2M8S",
+        "copyright": {
+          "text": "2023 Coke Boys Records"
+        },
+        "explicit": true,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/276475758",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2023-02-13T15:17:38Z"
+      }
+    },
+    {
+      "id": "292553769",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy A Dream",
+        "version": null,
+        "isrc": "SE5752067670",
+        "duration": "PT2M32S",
+        "copyright": {
+          "text": "T3G PRODUCTIONS AND ENTERTAINMENT"
+        },
+        "explicit": true,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/292553769",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2023-05-02T17:30:31Z"
+      }
+    },
+    {
+      "id": "292898109",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy a Dream",
+        "version": null,
+        "isrc": "TCAHB2360494",
+        "duration": "PT2M30S",
+        "copyright": {
+          "text": "2023 HighNHigher"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/292898109",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2023-05-04T04:41:43Z"
+      }
+    },
+    {
+      "id": "296916347",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy Me A Dream",
+        "version": null,
+        "isrc": "AUGEX2300012",
+        "duration": "PT2M40S",
+        "copyright": {
+          "text": "2023 Hattie Oates"
+        },
+        "explicit": true,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.12325694213222048,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/296916347",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2023-05-26T06:22:50Z"
+      }
+    },
+    {
+      "id": "301115150",
+      "type": "tracks",
+      "attributes": {
+        "title": "Would You Like to Buy a Dream",
+        "version": null,
+        "isrc": "QM7282324316",
+        "duration": "PT3M35S",
+        "copyright": {
+          "text": "(P) 1992 © HEP Records™ a division of 43 North Broadway, LLC. WARNING: All Rights Reserved. Unauthorized duplication is a violation of applicable laws."
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.0477552255378276,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/301115150",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2023-06-22T01:59:10Z"
+      }
+    },
+    {
+      "id": "357249780",
+      "type": "tracks",
+      "attributes": {
+        "title": "BUY A DREAM",
+        "version": null,
+        "isrc": "QZK6Q2464414",
+        "duration": "PT2M5S",
+        "copyright": {
+          "text": "A Band Or Better!"
+        },
+        "explicit": true,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "bpm": 94,
+        "popularity": 0.03187327367276835,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/357249780",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2024-04-13T12:18:58Z"
+      }
+    },
+    {
+      "id": "378314023",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy yourself a dream",
+        "version": null,
+        "isrc": "QZTAZ2405730",
+        "duration": "PT2M36S",
+        "copyright": {
+          "text": "EUPHONIA"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.046361472457647324,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/378314023",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2024-07-30T14:07:39Z"
+      }
+    },
+    {
+      "id": "439255622",
+      "type": "tracks",
+      "attributes": {
+        "title": "I Woke Up at 3AM, Went to the Black Market to Buy FL Studio, But When I Got Home It Opened FL Studio but looked like able? is my FL Studio DISABLETON!? and My Laptop Started Speaking in yapanese, What a Weird Dream… WAIT—WHY IS MY MOM BREAKDANCING IN THE",
+        "version": null,
+        "isrc": "QZTAT2515437",
+        "duration": "PT11M1S",
+        "copyright": {
+          "text": "Lumixia"
+        },
+        "explicit": true,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.047626262861312454,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/439255622",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2025-05-31T00:53:25Z"
+      }
+    },
+    {
+      "id": "451809538",
+      "type": "tracks",
+      "attributes": {
+        "title": "Marching Into A Best Buy With A Water Gun And A Dream",
+        "version": null,
+        "isrc": "QZWFR2555341",
+        "duration": "PT1M32S",
+        "copyright": {
+          "text": "Dr. Octagonapus"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0.15607442109707093,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/451809538",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2025-08-02T09:45:18Z"
+      }
+    },
+    {
+      "id": "481450520",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy Yourself a Dream",
+        "version": null,
+        "isrc": "QMG552000060",
+        "duration": "PT4M12S",
+        "copyright": {
+          "text": "Monotronic Records"
+        },
+        "explicit": false,
+        "ai": false,
+        "key": "D",
+        "keyScale": "MAJOR",
+        "bpm": 117,
+        "popularity": 0.0976172446450133,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/481450520",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2025-12-13T12:29:30Z"
+      }
+    },
+    {
+      "id": "499373478",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy A Dream",
+        "version": null,
+        "isrc": "QZL382254926",
+        "duration": "PT4M57S",
+        "copyright": {
+          "text": "YKOK"
+        },
+        "explicit": true,
+        "ai": false,
+        "key": "UNKNOWN",
+        "keyScale": "UNKNOWN",
+        "popularity": 0,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/499373478",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2026-02-16T07:29:18Z"
+      }
+    },
+    {
+      "id": "526569500",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy a Dream",
+        "version": null,
+        "isrc": "QT8BV2633497",
+        "duration": "PT3M51S",
+        "copyright": {
+          "text": "2026 Damba Sajak"
+        },
+        "explicit": false,
+        "ai": true,
+        "key": "Ab",
+        "keyScale": "MAJOR",
+        "bpm": 76,
+        "popularity": 0,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/526569500",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2026-05-20T16:43:55Z"
+      }
+    },
+    {
+      "id": "526686831",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy a Dream",
+        "version": null,
+        "isrc": "QT8BV2661544",
+        "duration": "PT4M",
+        "copyright": {
+          "text": "2026 Rike Trasim"
+        },
+        "explicit": false,
+        "ai": true,
+        "key": "Ab",
+        "keyScale": "MAJOR",
+        "bpm": 154,
+        "popularity": 0,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "HIRES_LOSSLESS",
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/526686831",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2026-05-21T01:57:51Z"
+      }
+    },
+    {
+      "id": "80016415",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy All My Dreams",
+        "version": null,
+        "isrc": "MX3451200070",
+        "duration": "PT3M29S",
+        "copyright": {
+          "text": "Gerardo Rosado"
+        },
+        "explicit": true,
+        "ai": false,
+        "key": "D",
+        "keyScale": "MINOR",
+        "bpm": 147,
+        "popularity": 0.21501310261340398,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "toneTags": [],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/80016415",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2017-10-14T05:15:17Z"
+      }
+    }
+  ]
+}

@@ -30,7 +30,7 @@ def main():
     td = tidal_gateway.TidalGateway()
 
     parser = argparse.ArgumentParser("Utility for managing your rekordbox collection.")
-    subparsers = parser.add_subparsers(dest="command", required=True, help="Available subcommands")
+    subparsers = parser.add_subparsers(dest="command", required=False, help="Available subcommands")
     tidal_analysis_parser = subparsers.add_parser("analyze-tidal-tracks", help="Analyzes all tidal tracks in your rekordbox collection.")
     tidal_analysis_parser.set_defaults(func=analyze_tidal_tracks_entrypoint, rb=rb, td=td)
 
@@ -46,6 +46,7 @@ def main():
     get_agent_registry_parser.set_defaults(func=get_agent_registry, r=rb, td=td)
 
     get_track_info_parser.add_argument("track_names", nargs="+", type=str, help="One or more names of rekordbox tracks in quotes.")
+    parser.set_defaults(func=analyze_tidal_tracks_entrypoint, rb=rb, td=td)
 
     args = parser.parse_args()
     args.func(args)

@@ -22,6 +22,7 @@ pydub==0.25.1
 pyparsing==3.3.3
 pyrekordbox==0.5.0
 python-dateutil==2.9.0.post0
+requests
 scipy==1.18.1
 six==1.17.0
 sounddevice==0.5.6
