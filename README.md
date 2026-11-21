@@ -44,7 +44,7 @@ Navigate to the root directory where you placed `python-tidal-openapi` and run `
 
 To use any tidal related subtools in ripple, you will need a tidal account. Go to [the tidal developer home page](https://developer.tidal.com/) and login using your account details. Go to dashboard and create a new app, calling it anything you want, and grab the client ID and client secret that the page now displays. 
 
-Create a folder under at the root level of this project called `secrets` and add a file called `client-credentials.json` within `secrets`. It should look like this:
+Create a folder under at the root level of this project called `secrets` and add a file called `client_credentials.json` within `secrets`. It should look like this:
 
 ```
 {
