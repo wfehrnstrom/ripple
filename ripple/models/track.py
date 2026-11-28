@@ -44,6 +44,12 @@ class Track:
     key: Optional[str]
     isrc: Optional[str]
 
+    # Constants
+    TIDAL_INCLUDE_ARTISTS = "artists"
+    TIDAL_INCLUDE_TRACKS = "tracks"
+
+    INCLUDE_KEYS = {TIDAL_INCLUDE_ARTISTS, TIDAL_INCLUDE_TRACKS}
+
     @staticmethod
     def _get_streaming_filename_for_track(streaming_service, streaming_id):
         # TODO: If we end up supporting more streaming platforms, we will need to change the format of filenameL depending on the streaming service.
@@ -51,24 +57,42 @@ class Track:
             return f"{streaming_service.value}:tracks:{streaming_id}"
 
     @staticmethod
-    def from_tidal_track(tidal_track):
+    def from_tidal_track(track_data, includes_data_dict):
+        # Convert from TrackResourceObject to simple custom object to facilitate adapting between tidal
+        # and rekordbox representations.
         t = Track()
 
+        attributes = track_data.attributes
+        external_links = attributes.external_links
+
+        t.streaming_url = None
+        for external_link in external_links:
+            if external_link and external_link.meta and external_link.meta.type == "TIDAL_SHARING":
+                t.streaming_url = external_link.href
+
+
         # Set Streaming/Provenance related attributes
-        t.streaming_url = tidal_track.url
         t.streaming_service = StreamingService.TIDAL
-        t.streaming_urls = {t.streaming_service: t.streaming_url}
-        t.streaming_id = tidal_track.id
+
+        if t.streaming_url:
+            t.streaming_urls = {t.streaming_service: t.streaming_url}
+
+        t.streaming_id = track_data.id
         t.filename = Track._get_streaming_filename_for_track(t.streaming_service, t.streaming_id)
 
         # Core attributes describing the track itself.
-        t.title = tidal_track.title
-        t.bpm = tidal_track.bpm
-        t.key = tidal_track.key
-        t.isrc = tidal_track.isrc
-        t.artist = Artist(tidal_track.artist.name)
-        t.duration = tidal_track.duration
-        t.explicit = tidal_track.explicit
+        if attributes is not None:
+            t.title = attributes.title
+            t.bpm = attributes.bpm
+            t.key = attributes.key
+            t.isrc = attributes.isrc
+            t.duration = attributes.duration
+            t.explicit = attributes.explicit
+
+        if includes_data_dict and includes_data_dict[Track.TIDAL_INCLUDE_ARTISTS]:
+            artist_data = includes_data_dict[Track.TIDAL_INCLUDE_ARTISTS][0]
+            if artist_data and artist_data.attributes:
+                t.artist = Artist(artist_data.attributes.name)
 
         t.id = t.get_hash_id()
 

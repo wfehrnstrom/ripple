@@ -54,7 +54,7 @@ def check_tidal_catalogue_for_freshness(td, paginated_track_tidal_ids):
         #  Right now, a track is considered stale if it doesn't have a current entry in tidal's catalogue for the tidal # ID it currently has.
         result_tracks = td.lookup_ids(tidal_track_ids)
         if result_tracks is not None:
-            id_to_result.update({str(track.id): track for track in result_tracks})
+            id_to_result.update({str(track.streaming_id): track for track in result_tracks})
         elif verbose and result_tracks is None:
             print(f"Didn't get a response back for tidal track ids: {", ".join(tidal_track_ids)}")
 
@@ -100,11 +100,10 @@ def analyze_tidal_tracks(rb, td):
         found_replacement_count += 1
 
         if verbose:
-            print(f"Old Track {(stale_tidal_id, track_name, artist_name)} -> {(str(replacement_track.id), replacement_track.name, replacement_track.artist.name)}")
+            print(f"Old Track {(stale_tidal_id, track_name, artist_name)} -> {(str(replacement_track.streaming_id), replacement_track.title, replacement_track.artist.name)}")
 
-        intermediate_replacement_track_repr = Track.from_tidal_track(replacement_track)
-        intermediate_replacement_track_repr.bind(stale_track.ID)
-        rekordbox_track_repr = intermediate_replacement_track_repr.to_rb_track()
+        replacement_track.bind(stale_track.ID)
+        rekordbox_track_repr = replacement_track.to_rb_track()
 
         # Change the tidal_id_to_track mapping to a tuple to signal we've found a replacement track
         tidal_id_to_track[stale_tidal_id] = (stale_track, rekordbox_track_repr)
@@ -114,9 +113,9 @@ def analyze_tidal_tracks(rb, td):
         pprint_obj(rekordbox_track_repr, "NEW TRACK")
 
         if rekordbox_track_repr is not None:
-            conf = input(f"Confirm track replacement:\r\nOld Track {(stale_tidal_id, track_name, artist_name)} -> New Track {(str(replacement_track.id), replacement_track.name, replacement_track.artist.name)} to rekordbox database? (y/n/stop): ")
+            conf = input(f"Confirm track replacement:\r\nOld Track {(stale_tidal_id, track_name, artist_name)} -> New Track {(str(replacement_track.streaming_id), replacement_track.title, replacement_track.artist.name)} to rekordbox database? (y/n/stop): ")
             if conf.lower() == "y":
-                print(f"Writing replacement track {replacement_track.name} with tidal ID {str(replacement_track.id)} and RB ID {rekordbox_track_repr.ID} to rekordbox database...")
+                print(f"Writing replacement track {replacement_track.title} with tidal ID {str(replacement_track.id)} and RB ID {rekordbox_track_repr.ID} to rekordbox database...")
                 rb.write_track(rekordbox_track_repr)
             elif conf.lower() == "stop":
                 print("User requested stop to replacement. Aborting.")

@@ -32,7 +32,11 @@ from tidal.api_client import ApiClient
 from tidal.api.tracks_api import TracksApi
 from tidal.api.search_results_api import SearchResultsApi
 
+from tidal.models.tracks_multi_resource_data_document import TracksMultiResourceDataDocument
+from tidal.models.tracks_resource_object import TracksResourceObject
+
 from ripple.gateways.exceptions import TooManyRequests
+from ripple.models.track import Track
 
 log = logging.getLogger(__name__)
 
@@ -44,6 +48,13 @@ class TidalGateway:
     client_secret = None
     # ISO 3166 A2 style country code hardcoded for now
     country_code = "US"
+
+    def __init__(self):
+        self._auth()
+        self.api_client = ApiClient(self.configuration)
+        self.tracks_api = TracksApi(self.api_client)
+        self.search_results_api = SearchResultsApi(self.api_client)
+
 
     def client_credentials(self, path=credentials_path) -> Tuple[str, str]:
         """The client_id and client_secret for the limited input device login."""
@@ -121,32 +132,70 @@ class TidalGateway:
                     return False
         return True
 
-    def __init__(self):
-        self._auth()
-        self.api_client = ApiClient(self.configuration)
-        self.tracks_api = TracksApi(self.api_client)
-        self.search_results_api = SearchResultsApi(self.api_client)
+    def lookup_ids(self, ids, include=list(Track.INCLUDE_KEYS - {Track.TIDAL_INCLUDE_TRACKS}), backoff=True):
+        tracks = []
+        includes_by_type  = dict()
+        if len(ids) < 1:
+            return tracks
+        response = self.backoff_request(self.tracks_api.tracks_get, self.country_code, filter_id=ids, include=include) if backoff else self.tracks_api.tracks_get(self.country_code, filter_id=ids, include=include)
+        if type(response) is TracksMultiResourceDataDocument:
+            # First prepare 'includes' section by zipping it by include data type
+            # Structure is "artists" -> "10244212" -> {"id": "10244212", "type": "artists", "attributes": {"name": "Chavinski"}}
+            for included_inner in response.included:
+                include_block = included_inner.actual_instance
+                if include_block.type is not None:
+                    if include_block.type not in includes_by_type:
+                        includes_by_type[include_block.type] = {include_block.id : include_block}
+                    else:
+                        includes_by_type[include_block.type][include_block.id] = include_block
 
-    def lookup_ids(self, ids, backoff=True):
-        return self.backoff_request(self.tracks_api.tracks_get, self.country_code, filter_id=ids) if backoff else self.tracks_api.tracks_get(self.country_code, filter_id=ids)
+            for track_resource_object in response.data:
+                includes_for_track = dict()
+                track_id = track_resource_object.id
+                relationships = track_resource_object.relationships
+                for include_key in include:
+                    if getattr(relationships, include_key) is not None:
+                        includes_for_track[include_key] = []
+                        # lookup in includes using the id of the found relationship
+                        relationship_obj = getattr(relationships, include_key)
+                        related_ids = [related.id for related in relationship_obj.data]
+                        for related_id in related_ids:
+                            if related_id in includes_by_type[include_key]:
+                                includes_for_track[include_key].append(includes_by_type[include_key][related_id])
+                tracks.append(Track.from_tidal_track(track_resource_object, includes_for_track))
 
-    def get_track_by_name_and_artist(self, track, artist):
-        return self.search_results_api.search_results_get(self.country_code, filter_query=f"{track} {artist}", include=["tracks"])
+        return tracks
 
-    def lookup_track(self, track, artist, backoff=True):
-        return self.backoff_request(self.session.get_track_by_name_and_artist, track, artist) if backoff else self.session.get_track_by_name_and_artist(track, artist)
+    def lookup_id(self, id, backoff=True):
+        res = self.lookup_ids([id], backoff=backoff)
+        if res is not None:
+            return res[0]
 
+    def _search_for_tracks_by_name(self, track_name, artist_name):
+        search_results_data_document = self.search_results_api.search_results_get(
+            country_code=self.country_code, filter_query=f"{track_name} {artist_name}", include=["tracks"])
+        included_list = search_results_data_document.included
+        return [include_block.actual_instance for include_block in included_list if type(include_block.actual_instance) is TracksResourceObject]
 
-    def lookup_track_with_info(self, track, artist, backoff=True):
-        response = self.lookup_track(track, artist, backoff)
+    def lookup_track(self, track_name, artist_name, backoff=True):
+        track_results_by_name = self.backoff_request(self._search_for_tracks_by_name, track_name, artist_name) if backoff else self._search_for_tracks_by_name(track_name, artist_name)
+        track_ids = [track.id for track in track_results_by_name]
+        track_results_by_id = self.lookup_ids(track_ids, backoff=backoff)
+        for track in track_results_by_id:
+            # TODO: Replace Exact Match with something more flexible
+            if track_name == track.title and artist_name == track.artist.name:
+                return track
+        return None
+
+    def lookup_track_with_info(self, track_name, artist_name, backoff=True):
+        response = self.lookup_track(track_name, artist_name, backoff)
         if response:
-            track_info_headline = f"------EXTENDED TIDAL INFORMATION: REPLACEMENT TRACK FOR \"{track}\" BY \"{artist}\"------------"
+            track_info_headline = f"------EXTENDED TIDAL INFORMATION: REPLACEMENT TRACK FOR \"{track_name}\" BY \"{artist_name}\"------------"
             print(track_info_headline)
             pprint(vars(response))
-            print("".join(["-" for _ in range(len(track))]))
+            print("".join(["-" for _ in range(len(track_name))]))
 
         return response
-
 
     def backoff_request(self, request, *args, **kw):
         response = None
