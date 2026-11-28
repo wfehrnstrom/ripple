@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": "150972124",
+      "type": "tracks",
+      "attributes": {
+        "title": "Buy a Dream",
+        "version": null,
+        "isrc": "UKN6K2000591",
+        "duration": "PT3M6S",
+        "copyright": {
+          "text": "2020 Lobster Theremin"
+        },
+        "explicit": false,
+        "popularity": 0.2599960026472117,
+        "accessType": "PUBLIC",
+        "availability": [
+          "STREAM",
+          "DJ"
+        ],
+        "mediaTags": [
+          "LOSSLESS"
+        ],
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/track/150972124",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ],
+        "spotlighted": false,
+        "createdAt": "2020-08-05T01:34:28Z"
+      },
+      "relationships": {
+        "artists": {
+          "data": [
+            {
+              "id": "20769520",
+              "type": "artists"
+            }
+          ],
+          "links": {
+            "self": "/tracks/150972124/relationships/artists?countryCode=US"
+          }
+        }
+      }
+    }
+  ],
+  "links": {
+    "self": "/tracks?filter%5Bid%5D=150972124&include=artists&countryCode=US"
+  },
+  "included": [
+    {
+      "id": "20769520",
+      "type": "artists",
+      "attributes": {
+        "name": "Chavinski",
+        "popularity": 0.2829627581072849,
+        "numberOfFollowers": 284,
+        "externalLinks": [
+          {
+            "href": "https://tidal.com/browse/artist/20769520",
+            "meta": {
+              "type": "TIDAL_SHARING"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
